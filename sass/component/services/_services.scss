@@ -1,0 +1,246 @@
+@import "../../variable/variable";
+@import "../../mixin/mixin";
+
+#services {
+    .ser-add {
+        background: $color-5B0888;
+        padding: 80px 0;
+
+        h2 {
+            text-align: center;
+            font-family: $font-mont;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            color: $color-FCF6FF;
+            padding-bottom: 50px;
+
+            span {
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                color: $color-EECEFF;
+                font-family: $font-jose;
+                text-transform: capitalize;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-family: $font-mont;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            color: $color-FCF6FF;
+        }
+    }
+
+    .services-main {
+        padding: 100px 0;
+
+        .head {
+            padding-bottom: 80px;
+
+            h2 {
+                @include cmn-head;
+
+                &::after {
+                    content: "";
+                    width: 50%;
+                    height: 3px;
+                    background: $color-5B0888;
+                    position: absolute;
+                    bottom: -10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            h3 {
+                @include cmn-sub;
+                text-align: center;
+                padding: 8px 0 30px;
+            }
+
+            p {
+                @include cmn-p;
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+
+        .uidesign {
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 0 3px $color-EECEFF;
+            transition: all ease 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 20%;
+                height: 20%;
+                background: $color-5B0888;
+                position: absolute;
+                top: -20%;
+                right: 0;
+                z-index: -1;
+                border-radius: 0 0 0 20px;
+                transition: all ease 0.3s;
+            }
+
+            .icon {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 10px;
+
+                img {
+                    width: 15%;
+                }
+
+                span {
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    color: $color-FCF6FF;
+                    margin: -20px 5px 0;
+                }
+            }
+
+            .uiinfo {
+                h3 {
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    font-family: $font-mont;
+                    color: $color-5B0888;
+                    text-transform: capitalize;
+                    transition: all ease 0.3s;
+                }
+
+                h4 {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    font-family: $font-mont;
+                    color: $color-0C0312;
+                    padding-bottom: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 26px;
+                    font-family: $font-mont;
+                    color: $color-0C0312;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 20px $color-EECEFF;
+
+                &::after {
+                    background: $color-A720F0;
+                    top: 0;
+                }
+
+                .uiinfo {
+                    h3 {
+                        color: $color-A720F0;
+                    }
+                }
+            }
+
+        }
+
+        .ser-more {
+            padding: 30px 30px 50px;
+            box-shadow: 0 0 3px $color-EECEFF;
+            transition: all ease 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+
+            &::after {
+                content: "";
+                width: 20%;
+                height: 20%;
+                background: $color-5B0888;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: -1;
+                border-radius: 0 0 0 20px;
+                transition: all ease 0.3s;
+            }
+
+            span {
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: $color-FCF6FF;
+                margin: -15px 0px 0;
+                padding: 0 0 144px;
+            }
+
+            h3 {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: $color-5B0888;
+                font-family: $font-mont;
+                text-transform: capitalize;
+                text-align: right;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 130%;
+                    height: 3px;
+                    background: $color-5B0888;
+                    position: absolute;
+                    bottom: -20%;
+                    right: 0;
+                }
+            }
+
+            h4 {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                font-family: $font-mont;
+                color: $color-0C0312;
+                text-align: right;
+                padding-top: 10px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 20px $color-EECEFF;
+
+                h3 {
+                    color: $color-A720F0;
+                }
+
+                &::after {
+                    background: $color-A720F0;
+                }
+            }
+        }
+    }
+}

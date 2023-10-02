@@ -1,0 +1,31 @@
+@mixin cmn-head {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: $font-mont;
+    color: $color-5B0888;
+    text-align: center;
+    position: relative;
+    text-transform: capitalize;
+}
+
+@mixin cmn-sub {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+    font-family: $font-mont;
+    color: $color-0C0312;
+}
+
+@mixin cmn-p {
+    text-align: justify;
+    font-family: $font-mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 30px 0;
+}

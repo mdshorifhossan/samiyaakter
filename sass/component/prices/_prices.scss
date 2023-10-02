@@ -1,0 +1,258 @@
+@import "../../variable/variable";
+@import "../../mixin/mixin";
+
+#prices {
+    padding-bottom: 100px;
+
+    .prices-add {
+        background: $color-5B0888;
+        padding: 80px 0;
+
+        h2 {
+            text-align: center;
+            font-family: $font-mont;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            color: $color-FCF6FF;
+            padding-bottom: 50px;
+
+            span {
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                color: $color-EECEFF;
+                font-family: $font-jose;
+                text-transform: capitalize;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-family: $font-mont;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            color: $color-FCF6FF;
+        }
+    }
+
+    .prices-main {
+        padding: 100px 0;
+
+        .head {
+
+            h2 {
+                @include cmn-head;
+
+                &::after {
+                    content: "";
+                    width: 50%;
+                    height: 3px;
+                    background: $color-5B0888;
+                    position: absolute;
+                    bottom: -10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            h3 {
+                @include cmn-sub;
+                text-align: center;
+                padding: 8px 0 30px;
+            }
+
+            p {
+                @include cmn-p;
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .price-list {
+
+        .items {
+            position: relative;
+            background: $color-FCF6FF;
+            transition: all ease-in-out 0.3s;
+
+            .popular {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transition: all ease-in-out 0.3s;
+                transform: translateX(-50%);
+                z-index: -99;
+                width: 70%;
+
+                background: $color-A720F0;
+                font-family: $font-mont;
+                font-size: 20px;
+                padding: 15px 0;
+                text-align: center;
+                color: $color-FCF6FF;
+                text-transform: capitalize;
+                opacity: 0;
+            }
+
+            h3 {
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                font-family: $font-jose;
+                color: $color-FCF6FF;
+                text-transform: capitalize;
+                text-align: center;
+
+                padding: 20px 0 80px;
+                background: $color-5B0888;
+                clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+                transition: all ease-in-out 0.3s;
+            }
+
+            h4 {
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                font-family: $font-jose;
+                color: $color-FCF6FF;
+                text-align: center;
+
+                padding: 20px;
+                background: $color-A720F0;
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+                position: absolute;
+                top: 12%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all ease-in-out 0.3s;
+
+                span {
+                    font-family: $font-mont;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: $color-FCF6FF;
+                }
+            }
+
+            ul {
+                padding: 50px 0 30px 80px;
+
+                li {
+                    padding: 5px 0;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-family: $font-mont;
+                    line-height: 26px;
+                    text-transform: capitalize;
+
+                    span {
+                        padding: 0 20px 0 0;
+                        color: $color-5B0888;
+                    }
+                }
+            }
+
+            a {
+                padding: 15px 30px;
+                background: $color-5B0888;
+                color: $color-FCF6FF;
+                text-transform: capitalize;
+                font-family: $font-mont;
+                font-weight: 600;
+                font-size: 20px;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                transition: all ease 0.3s;
+                display: block;
+                text-align: center;
+
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 0%;
+                    background: $color-A720F0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: all ease 0.3s;
+                }
+
+
+            }
+
+            &:hover {
+                box-shadow: 0 0 30px $color-EECEFF;
+
+                .popular {
+                    top: -9.3%;
+                    opacity: 1;
+                    background: $color-5B0888;
+                    z-index: 9;
+                }
+
+
+                h3 {
+                    background: $color-A720F0;
+                }
+
+                h4 {
+                    background: $color-5B0888;
+                }
+
+                a {
+                    color: $color-FCF6FF;
+
+                    &::after {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .sponser {
+        background: $color-5B0888;
+        margin: 80px 0 0;
+        padding: 50px 0;
+
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            p {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                font-family: $font-mont;
+                color: $color-FCF6FF;
+                text-transform: capitalize;
+                text-align: center;
+                transition: all ease-in-out 0.3s;
+                opacity: 0.4;
+            }
+
+            .slick-center {
+                opacity: 1;
+            }
+        }
+
+    }
+}

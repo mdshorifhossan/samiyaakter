@@ -1,0 +1,223 @@
+@import "../../variable/variable";
+@import "../../mixin/mixin";
+
+#experience {
+    padding-bottom: 120px;
+    .head {
+        padding-bottom: 80px;
+
+        h2 {
+            @include cmn-head;
+
+            &::after {
+                content: "";
+                width: 50%;
+                height: 3px;
+                background: $color-5B0888;
+                position: absolute;
+                bottom: -10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        h3 {
+            @include cmn-sub;
+            text-align: center;
+            padding: 8px 0 30px;
+        }
+
+        p {
+            @include cmn-p;
+            text-align: center;
+            padding: 0 20px;
+        }
+    }
+
+    .uidesign {
+        margin-bottom: 30px;
+        padding: 30px;
+        box-shadow: 0 0 3px $color-EECEFF;
+        transition: all ease 0.3s;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            width: 10%;
+            height: 50%;
+            background: $color-5B0888;
+            position: absolute;
+            bottom: -40%;
+            right: 0;
+            transform: rotate(45deg);
+            transition: all ease 0.3s;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+
+            img {
+                width: 10%;
+            }
+
+            span {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                font-family: $font-mont;
+                color: $color-5B0888;
+                opacity: 0.3;
+            }
+        }
+
+        .uiinfo {
+            h3 {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                font-family: $font-mont;
+                color: $color-5B0888;
+                text-transform: capitalize;
+                transition: all ease 0.3s;
+            }
+
+            h4 {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                font-family: $font-mont;
+                color: $color-0C0312;
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px;
+                font-family: $font-mont;
+                color: $color-0C0312;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 20px $color-EECEFF;
+
+            .uiinfo {
+                h3 {
+                    color: $color-A720F0;
+                }
+            }
+
+            &::after {
+                background: $color-A720F0;
+                bottom: -25%;
+            }
+        }
+
+    }
+
+    .exm-more {
+        margin-bottom: 30px;
+        padding: 178px 30px 50px;
+        box-shadow: 0 0 3px $color-EECEFF;
+        transition: all ease 0.3s;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            width: 10%;
+            height: 50%;
+            background: $color-5B0888;
+            position: absolute;
+            bottom: -40%;
+            right: 0;
+            transform: rotate(45deg);
+            transition: all ease 0.3s;
+        }
+
+        h2 {
+            font-size: 90px;
+            font-family: $font-mont;
+            font-weight: 600;
+            line-height: 50px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            animation: expplus infinite ease 5s;
+
+            @keyframes expplus {
+                0% {
+                    transform: rotate(0deg);
+                    color: $color-A720F0;
+                }
+
+                50% {
+                    transform: rotate(360deg);
+                    color: $color-5B0888;
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                    color: $color-A720F0;
+                }
+            }
+        }
+
+
+        h3 {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            color: $color-5B0888;
+            font-family: $font-mont;
+            text-transform: capitalize;
+            text-align: right;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 70%;
+                height: 3px;
+                background: $color-5B0888;
+                position: absolute;
+                bottom: -20%;
+                right: 0;
+            }
+        }
+
+        h4 {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            font-family: $font-mont;
+            color: $color-0C0312;
+            text-align: right;
+            padding-top: 10px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 20px $color-EECEFF;
+
+            h3 {
+                color: $color-A720F0;
+            }
+
+            &::after {
+                background: $color-A720F0;
+                bottom: -25%;
+            }
+        }
+    }
+
+}
